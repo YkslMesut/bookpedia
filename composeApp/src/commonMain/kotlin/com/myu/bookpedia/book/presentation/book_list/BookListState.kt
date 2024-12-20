@@ -4,7 +4,7 @@ import com.myu.bookpedia.book.domain.Book
 import com.myu.bookpedia.core.presentation.UiText
 
 data class BookListState(
-    val searchQuery: String = String(),
+    val searchQuery: String = "Kotlin",
     val searchResults: List<Book> = books,
     val favoriteBooks: List<Book> = emptyList(),
     val isLoading: Boolean = false,
@@ -22,7 +22,7 @@ val books = (1..100).map {
         languages = listOf(),
         firstPublishYear = null,
         averageRating = 4.674332,
-        rationCount = 5,
+        ratingCount = 5,
         numPages = 100,
         numEditions = 3
     )
