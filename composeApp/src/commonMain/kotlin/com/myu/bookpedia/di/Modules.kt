@@ -2,7 +2,7 @@ package com.myu.bookpedia.di
 
 import androidx.sqlite.driver.bundled.BundledSQLiteDriver
 import com.myu.bookpedia.book.data.database.DatabaseFactory
-import com.myu.bookpedia.book.data.database.FavoriteBookDataBase
+import com.myu.bookpedia.book.data.database.FavoriteBookDatabase
 import com.myu.bookpedia.book.data.network.KtorRemoteBookDataSource
 import com.myu.bookpedia.book.data.network.RemoteBookDataSource
 import com.myu.bookpedia.book.data.repository.DefaultBookRepository
@@ -27,7 +27,7 @@ val sharedModule = module {
         get<DatabaseFactory>().create()
             .setDriver(BundledSQLiteDriver()).build()
     }
-    single { get<FavoriteBookDataBase>().favoriteBookDao }
+    single { get<FavoriteBookDatabase>().favoriteBookDao }
 
     viewModelOf(::BookListViewModel)
     viewModelOf(::SelectedBookViewModel)

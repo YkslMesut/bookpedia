@@ -8,9 +8,9 @@ import platform.Foundation.NSFileManager
 import platform.Foundation.NSUserDomainMask
 
 actual class DatabaseFactory {
-    actual fun create(): RoomDatabase.Builder<FavoriteBookDataBase> {
-        val dbFile = documentDirectory() + "/${FavoriteBookDataBase.DB_NAME}"
-        return Room.databaseBuilder<FavoriteBookDataBase>(name = dbFile)
+    actual fun create(): RoomDatabase.Builder<FavoriteBookDatabase> {
+        val dbFile = documentDirectory() + "/${FavoriteBookDatabase.DB_NAME}"
+        return Room.databaseBuilder<FavoriteBookDatabase>(name = dbFile)
     }
 
     @OptIn(ExperimentalForeignApi::class)

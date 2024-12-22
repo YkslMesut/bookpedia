@@ -10,8 +10,8 @@ import androidx.room.TypeConverters
     version = 1
 )
 @TypeConverters(StringListTypeConverter::class)
-@ConstructedBy(BookDatabaseConstructor::class )
-abstract class FavoriteBookDataBase : RoomDatabase() {
+@ConstructedBy(BookDatabaseConstructor::class)
+abstract class FavoriteBookDatabase : RoomDatabase() {
     abstract val favoriteBookDao: FavoriteBookDao
 
     companion object {

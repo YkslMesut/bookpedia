@@ -3,5 +3,5 @@ package com.myu.bookpedia.book.data.database
 import androidx.room.RoomDatabase
 
 expect class DatabaseFactory {
-    fun create(): RoomDatabase.Builder<FavoriteBookDataBase>
+    fun create(): RoomDatabase.Builder<FavoriteBookDatabase>
 }
