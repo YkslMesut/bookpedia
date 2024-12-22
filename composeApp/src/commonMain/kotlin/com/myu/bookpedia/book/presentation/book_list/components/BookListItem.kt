@@ -40,7 +40,6 @@ import com.myu.bookpedia.book.domain.Book
 import com.myu.bookpedia.core.presentation.LightBlue
 import com.myu.bookpedia.core.presentation.SandYellow
 import org.jetbrains.compose.resources.painterResource
-import kotlin.math.round
 
 @Composable
 fun BookListItem(
@@ -123,7 +122,7 @@ fun BookListItem(
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         Text(
-                            text = "${round(rating * 10) / 10.0}",
+                            text = "$rating",
                             style = MaterialTheme.typography.bodyMedium
                         )
                         Icon(

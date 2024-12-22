@@ -5,6 +5,7 @@ import com.myu.bookpedia.book.data.network.RemoteBookDataSource
 import com.myu.bookpedia.book.data.repository.DefaultBookRepository
 import com.myu.bookpedia.book.domain.repository.BookRepository
 import com.myu.bookpedia.book.presentation.SelectedBookViewModel
+import com.myu.bookpedia.book.presentation.book_detail.BookDetailViewModel
 import com.myu.bookpedia.book.presentation.book_list.BookListViewModel
 import com.myu.bookpedia.core.data.HttpClientFactory
 import org.koin.core.module.dsl.singleOf
@@ -21,4 +22,5 @@ val sharedModule = module {
 
     viewModelOf(::BookListViewModel)
     viewModelOf(::SelectedBookViewModel)
+    viewModelOf(::BookDetailViewModel)
 }

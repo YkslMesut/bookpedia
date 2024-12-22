@@ -2,6 +2,7 @@ package com.myu.bookpedia.book.data.mappers
 
 import com.myu.bookpedia.book.data.dto.SearchedBookDto
 import com.myu.bookpedia.book.domain.Book
+import kotlin.math.round
 
 fun SearchedBookDto.toBook(): Book {
     return Book(
@@ -16,7 +17,7 @@ fun SearchedBookDto.toBook(): Book {
         description = null,
         languages = languages ?: emptyList(),
         firstPublishYear = firstPublishYear.toString(),
-        averageRating = ratingsAverage,
+        averageRating = if (ratingsAverage != null) round(ratingsAverage * 10) / 10.0 else ratingsAverage,
         ratingCount = ratingsCount,
         numPages = numPagesMedian,
         numEditions = numEditions ?: 0
