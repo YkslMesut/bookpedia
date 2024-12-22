@@ -5,7 +5,7 @@ package com.myu.bookpedia.book.presentation.book_list
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.myu.bookpedia.book.domain.Book
-import com.myu.bookpedia.book.domain.BookRepository
+import com.myu.bookpedia.book.domain.repository.BookRepository
 import com.myu.bookpedia.core.domain.onError
 import com.myu.bookpedia.core.domain.onSuccess
 import com.myu.bookpedia.core.presentation.toUiText

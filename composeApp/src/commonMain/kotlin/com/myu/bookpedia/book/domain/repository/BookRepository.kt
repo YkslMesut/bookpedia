@@ -1,5 +1,6 @@
-package com.myu.bookpedia.book.domain
+package com.myu.bookpedia.book.domain.repository
 
+import com.myu.bookpedia.book.domain.Book
 import com.myu.bookpedia.core.domain.DataError
 import com.myu.bookpedia.core.domain.Result
 
