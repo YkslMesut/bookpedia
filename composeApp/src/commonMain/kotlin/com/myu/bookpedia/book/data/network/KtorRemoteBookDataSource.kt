@@ -1,5 +1,6 @@
 package com.myu.bookpedia.book.data.network
 
+import com.myu.bookpedia.book.data.dto.BookWorkDto
 import com.myu.bookpedia.book.data.dto.SearchedResponseDto
 import com.myu.bookpedia.core.data.safeCall
 import com.myu.bookpedia.core.domain.DataError
@@ -27,6 +28,14 @@ class KtorRemoteBookDataSource(private val httpClient: HttpClient) : RemoteBookD
                     "key,title,author_name,author_key,cover_edition_key,cover_i,ratings_average,ratings_count,first_publish_year,language,number_of_pages_median,edition_count"
                 )
             }
+        }
+    }
+
+    override suspend fun getBookDetails(bookWorkId: String): Result<BookWorkDto, DataError.Remote> {
+        return safeCall<BookWorkDto> {
+            httpClient.get(
+                urlString = "$BASE_URL/works/$bookWorkId.json"
+            )
         }
     }
 }

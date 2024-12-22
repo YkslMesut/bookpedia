@@ -17,4 +17,8 @@ class DefaultBookRepository(
                 dto.results.map { it.toBook() }
             }
     }
+
+    override suspend fun getBookDescription(bookId: String): Result<String?, DataError.Remote> {
+        return remoteBookDataSource.getBookDetails(bookWorkId = bookId).map { it.description }
+    }
 }
